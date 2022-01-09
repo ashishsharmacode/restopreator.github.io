@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+    <style>
+          body{
+            background-color: rgb(195, 16, 211);
+        }
+        body:hover{
+            background-color: rgb(247, 200, 15);
+        }
+        h1{
+            text-align: center;
+            margin-top: 10rem;
+            color:rgb(61, 15, 230);
+        }
+        .container{
+            text-align: center;
+            font-weight: bolder;
+            font-size: xx-large;
+            background-color: rgb(240, 45, 11);
+            color:rgb(82, 73, 74);
+            width:10rem;
+            margin-left: 30rem;
+            height:3rem;
+            margin-top: 5rem;
+            margin-left: 34rem;
+            padding:1rem;
+            border-radius: 20px;
+        }
+        .container:hover{
+            color:rgb(165, 101, 42);
+            background-color: rgb(0, 255, 128);
+            border-radius: 50px;
+        }
+        h1:hover{
+            color:rgb(0, 183, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Print the minimum number using rest operator</h1>
+    <div class="container"></div>
+    
+
+    <script>
+    function min(...f) {
+        var b1 = f;
+        var b2 = f.length;
+        minimum = b1[b2 - 1];
+        while (b2--){
+            if(b1[b2] < minimum){
+                minimum= b1[b2];
+            }
+        }
+                return minimum;
+    }
+    document.querySelector(".container").innerText = min(45, 65, 105, 55, 53, 69, 70, 87, 1001);
+</script>
+    
+</body>
+</html>
